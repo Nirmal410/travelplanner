@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+
+{% block title %}Travel Destinations - TravelPlanner{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container-fluid p-0">
+        <!-- Destination Carousel -->
+        <div class="destination-carousel">
+            <div class="carousel-container">
+                <div class="slides-wrapper">
+                    <!-- Slide 1: Goa -->
+                    <div class="slide active" data-bg="https://pixabay.com/get/gcb981d7a4fe8a723aed0053034d7075074935e6cf7668a6b43883d88db01ac211dc2a2e5de7766475f83de977b9948033c0d4f39e34f717d0d2488e99ce509ec_1280.jpg">
+                        <div class="slide-content">
+                            <div class="destination-info">
+                                <h1 class="destination-name">Goa</h1>
+                                <p class="destination-desc">Experience pristine beaches, vibrant nightlife, and Portuguese colonial charm in India's coastal paradise.</p>
+                                <div class="action-buttons">
+                                    <a href="{{ url_for('planner') }}" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-route me-2"></i>Plan Trip
+                                    </a>
+                                    <button class="btn btn-outline-light btn-lg weather-btn" data-location="Goa">
+                                        <i class="fas fa-cloud-sun me-2"></i>Weather
+                                    </button>
+                                </div>
+                                <div class="weather-info" id="weather-goa"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Kashmir -->
+                    <div class="slide" data-bg="https://pixabay.com/get/g1cf92646eb2d714e00b7c12da9dc25662d0352508da7020524cd9f2783ccdd306171a261c49f23c11e94048ed244001e84d704ee63366e2d1227d4eee1b32bc4_1280.jpg">
+                        <div class="slide-content">
+                            <div class="destination-info">
+                                <h1 class="destination-name">Kashmir</h1>
+                                <p class="destination-desc">Discover the breathtaking beauty of snow-capped mountains, serene lakes, and lush valleys in paradise on earth.</p>
+                                <div class="action-buttons">
+                                    <a href="{{ url_for('planner') }}" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-route me-2"></i>Plan Trip
+                                    </a>
+                                    <button class="btn btn-outline-light btn-lg weather-btn" data-location="Srinagar">
+                                        <i class="fas fa-cloud-sun me-2"></i>Weather
+                                    </button>
+                                </div>
+                                <div class="weather-info" id="weather-srinagar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Tamil Nadu -->
+                    <div class="slide" data-bg="https://pixabay.com/get/g95a09ab27b3d78e0f600eb61d696b64a5f1755e45083d1cb5de1297592ecf53d8beda93e62f7ef2e732ef45426e6dda7e46cf92571bc42419bff93372b5f9332_1280.jpg">
+                        <div class="slide-content">
+                            <div class="destination-info">
+                                <h1 class="destination-name">Tamil Nadu</h1>
+                                <p class="destination-desc">Explore ancient temples, rich cultural heritage, and diverse landscapes from hill stations to coastal beauty.</p>
+                                <div class="action-buttons">
+                                    <a href="{{ url_for('planner') }}" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-route me-2"></i>Plan Trip
+                                    </a>
+                                    <button class="btn btn-outline-light btn-lg weather-btn" data-location="Chennai">
+                                        <i class="fas fa-cloud-sun me-2"></i>Weather
+                                    </button>
+                                </div>
+                                <div class="weather-info" id="weather-chennai"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Kerala -->
+                    <div class="slide" data-bg="https://pixabay.com/get/g7256836517d4a9ad5b124b358ec93b1abe3211ec64694c05ad3037f4bae91e0627816143ef70da7655ddab82a1f0cc28a52f60d7acc0f9db00fcb61183e83eb0_1280.jpg">
+                        <div class="slide-content">
+                            <div class="destination-info">
+                                <h1 class="destination-name">Kerala</h1>
+                                <p class="destination-desc">Relax in tranquil backwaters, enjoy traditional houseboats, and experience God's own country's natural beauty.</p>
+                                <div class="action-buttons">
+                                    <a href="{{ url_for('planner') }}" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-route me-2"></i>Plan Trip
+                                    </a>
+                                    <button class="btn btn-outline-light btn-lg weather-btn" data-location="Kochi">
+                                        <i class="fas fa-cloud-sun me-2"></i>Weather
+                                    </button>
+                                </div>
+                                <div class="weather-info" id="weather-kochi"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: Himachal Pradesh -->
+                    <div class="slide" data-bg="https://pixabay.com/get/gd8c28fda9e53516a88119838cd8626b7520119e9c12433c2f68984f855c35ca8f9ca7391b809a5f5c0a9114714250c1ed50c89bafd562f60d031c640a4716be7_1280.jpg">
+                        <div class="slide-content">
+                            <div class="destination-info">
+                                <h1 class="destination-name">Himachal Pradesh</h1>
+                                <p class="destination-desc">Adventure through majestic Himalayas, charming hill stations, and experience thrilling mountain activities.</p>
+                                <div class="action-buttons">
+                                    <a href="{{ url_for('planner') }}" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-route me-2"></i>Plan Trip
+                                    </a>
+                                    <button class="btn btn-outline-light btn-lg weather-btn" data-location="Shimla">
+                                        <i class="fas fa-cloud-sun me-2"></i>Weather
+                                    </button>
+                                </div>
+                                <div class="weather-info" id="weather-shimla"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6: Rajasthan -->
+                    <div class="slide" data-bg="https://pixabay.com/get/g4255617d725177f42d531be7ce6e8ad23e5e449bf813d4d35ba3ed1d4b68766db9945e6747bbaa7207fed4c1770c03be345f8eda5d659fcf51022449cbae4542_1280.jpg">
+                        <div class="slide-content">
+                            <div class="destination-info">
+                                <h1 class="destination-name">Rajasthan</h1>
+                                <p class="destination-desc">Immerse yourself in royal palaces, golden deserts, and the vibrant culture of the land of kings.</p>
+                                <div class="action-buttons">
+                                    <a href="{{ url_for('planner') }}" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-route me-2"></i>Plan Trip
+                                    </a>
+                                    <button class="btn btn-outline-light btn-lg weather-btn" data-location="Jaipur">
+                                        <i class="fas fa-cloud-sun me-2"></i>Weather
+                                    </button>
+                                </div>
+                                <div class="weather-info" id="weather-jaipur"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="carousel-controls">
+                    <button class="prev-btn" onclick="changeSlide(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="next-btn" onclick="changeSlide(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Slide Indicators -->
+                <div class="slide-indicators">
+                    <button class="indicator active" onclick="currentSlide(1)"></button>
+                    <button class="indicator" onclick="currentSlide(2)"></button>
+                    <button class="indicator" onclick="currentSlide(3)"></button>
+                    <button class="indicator" onclick="currentSlide(4)"></button>
+                    <button class="indicator" onclick="currentSlide(5)"></button>
+                    <button class="indicator" onclick="currentSlide(6)"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="features-section py-5">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>AI-Powered Planning</h3>
+                            <p>Get personalized itineraries generated by artificial intelligence based on your preferences and budget.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-cloud-sun"></i>
+                            </div>
+                            <h3>Real-time Weather</h3>
+                            <p>Check current weather conditions for your destinations to plan your trip accordingly.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-blog"></i>
+                            </div>
+                            <h3>Travel Blog</h3>
+                            <p>Share your travel experiences and read inspiring stories from fellow travelers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
